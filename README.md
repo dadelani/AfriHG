@@ -12,7 +12,7 @@ We obtained the data by combinig the XL-Sum corpus with MasakhaNews corpus (of w
 
 ### Data Splits
 
-For all languages, we maintained the splits used in the XL-Sum and added all data from Masakhanews to the train data, while Languages like Shona, Xhosa, and Zulu that are not available in XL-Sum where splitted into a Train/Dev/Test split of 80/10/10 ratio used in the XL-Sum.
+For all languages, we maintained the splits used in the XL-Sum and added all data from Masakhanews to the train data, while Languages like Shona (sna), Xhosa (xho), and Zulu (zul) that are not available in XL-Sum where splitted into a Train/Dev/Test split of 80/10/10 ratio used in the XL-Sum.
 
 The original splits were named `train`, `dev` and `test` and they correspond to the `train`, `validation` and `test` splits.
 
@@ -37,7 +37,7 @@ data = load_dataset('masakhanews', 'yor')
 -->
 
 
-Table below summarizes the Data Split and model performance on the AfriHG and In comparation with the XL-Sum Abstractive Summarization results.
+Table below summarizes the Data Split and the Model Performance on the AfriHG with with the XL-Sum Abstractive Summarization Comparison results.
 
 | Language       | Script | Train / Dev / Test       | mT5-base (Summary) | mT5-base (Headline) | AfriTeVa V2-base (Headline) | Aya (Headline) |
 |----------------|--------|--------------------------|--------------------|---------------------|-----------------------------|----------------|
@@ -53,7 +53,7 @@ Table below summarizes the Data Split and model performance on the AfriHG and In
 | Shona (sna)    | Latin  | 9,573 / 1,064 / 1,064    | - / - / -          | 22.6 / 8.1 / 22.1   | **25.5 / 9.6 / 24.7**       | 23.5 / 8.2 / 22.7 |
 | Somali (som)   | Latin  | 10,508 / 745 / 745       | 31.6 / 11.6 / 24.2 | 24.1 / 7.0 / 21.2   | 28.2 / 9.6 / 24.7           | **28.6 / 10.5 / 24.9** |
 | Swahili (swa)  | Latin  | 18,914 / 987 / 987       | 37.7 / 17.9 / 30.9 | 33.0 / 13.4 / 29.1  | 37.6 / 15.8 / 33.1          | **38.9 / 16.7 / 33.9** |
-| Tigrinya (tir) | Ge'ez  | 12,351 / 681 / 681       | 25.3 / 8.0 / 21.2  | 21.9 / 7.0 / 19.8   | 26.3 / 8.7 / 23.7           | **25.7 / 8.6 / 22.8** |
+| Tigrinya (tir) | Ge'ez  | 12,351 / 681 / 681       | 25.3 / 8.0 / 21.2  | 21.9 / 7.0 / 19.8   | **26.3 / 8.7 / 23.7**           | 25.7 / 8.6 / 22.8 |
 | Xhosa (xho)    | Latin  | 10,440 / 1,305 / 1,305   | - / - / -          | 13.0 / 4.0 / 12.7   | 15.2 / 5.5 / 14.9           | **16.1 / 5.3 / 15.2** |
 | Yoruba (yor)   | Latin  | 15,172 / 793 / 793       | 31.7 / 11.7 / 25.1 | 40.0 / 14.8 / 31.4  | **42.0 / 16.2 / 33.1**      | 36.0 / 13.5 / 28.3 |
 | Zulu (zul)     | Latin  | 14,209 / 1,776 / 1,776   | - / - / -          | 16.0 / 5.0 / 15.5   | **17.8 / 5.5 / 17.4**       | 17.0 / 4.9 / 16.2 |
